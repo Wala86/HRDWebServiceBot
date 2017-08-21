@@ -52,10 +52,9 @@ public class CustomerController {
 		
 		
 		Map<String,Object> json = new HashMap<String,Object>();
-		System.out.println("************* ******************"+obj);
+		System.out.println("**********RequestBody*****************"+obj);
 	
-		
-		String Speech ="The cost of shipping to  is  for "+obj.get("result");
+	
 		 json.put("speech", " The cost of shipping to  is  1000 euros.");
 		 json.put("displayText", " The cost of shipping to  is  1000 euros.");
 		 
