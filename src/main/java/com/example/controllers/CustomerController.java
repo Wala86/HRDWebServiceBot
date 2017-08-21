@@ -96,11 +96,12 @@ public class CustomerController {
 	 * }
 	 */
 
-	@WebServlet("/webhook")
+		@WebServlet("/webhook")
 	public class MyWebhookServlet extends AIWebhookServlet {
 		@Override
 		protected void doWebhook(AIWebhookRequest input, Fulfillment output) {
-			output.setSpeech("You said: " + input.getResult().getFulfillment().getSpeech());
+			output.setSpeech("You said: " + input.getResult().getFulfillment().getDisplayText());
+			System.out.println("-----------------You said:---------------------" + input.getResult().getFulfillment().getDisplayText());
 		}
 	}
 
