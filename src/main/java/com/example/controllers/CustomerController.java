@@ -59,7 +59,7 @@ public class CustomerController {
 		 json.put("speech", " The cost of shipping to  is  1000 euros.");
 		 json.put("displayText", " The cost of shipping to  is  1000 euros.");
 		 
-		json.put( "source", "apiai-onlinestore-shipping");
+		json.put( "source", "hrdwebservicebot");
 		System.out.println("************* ******************"+obj.get("result"));
 		return json;
 
