@@ -52,7 +52,7 @@ public class CustomerController {
 		
 		
 		Map<String,Object> json = new HashMap<String,Object>();
-		
+		System.out.println("************* ******************"+obj);
 	
 		
 		String Speech ="The cost of shipping to  is  for "+obj.get("result");
@@ -60,7 +60,7 @@ public class CustomerController {
 		 json.put("displayText", " The cost of shipping to  is  1000 euros.");
 		 
 		json.put( "source", "hrdwebservicebot");
-		System.out.println("************* ******************"+obj.get("result"));
+		
 		return json;
 
 	}
