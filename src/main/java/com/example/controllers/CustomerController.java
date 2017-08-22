@@ -28,7 +28,7 @@ public class CustomerController {
 	private @ResponseBody Map<String, Object> webhook(@RequestBody Map<String, Object> obj) throws JSONException {
 
 		Map<String, Object> json = new HashMap<String, Object>();
-		System.out.println("************RequestBody*****************" + obj);
+		//System.out.println("************RequestBody*****************" + obj);
 
 		json.put("speech", " The cost of shipping to  is  1000 euros.");
 		json.put("displayText", " The cost of shipping to  is  1000 euros.");
