@@ -24,17 +24,6 @@ public class CustomerController {
 	    return model;
 	  }
 
-	/*
-	 * // @RequestMapping(value = "/webhook", method = RequestMethod.POST) //
-	 * private Map<String,Object> webhook(@RequestParam("shipping-zone") String //
-	 * shippingZone, @RequestParam("action") String action) throws JSONException {
-	 * // // // // Map<String,Object> json = new HashMap<String,Object>(); // //
-	 * json.put("speech", " The cost of shipping to is 1000 euros."); //
-	 * json.put("displayText", " The cost of shipping to is 1000 euros."); // //
-	 * json.put( "source", "apiai-onlinestore-shipping"); //
-	 * System.out.println("************* //
-	 * "+shippingZone+"******************"+action); // return json; // // } /*
-	 */
 	@RequestMapping(value = "/webhook", method = RequestMethod.POST)
 	private @ResponseBody Map<String, Object> webhook(@RequestBody Map<String, Object> obj) throws JSONException {
 
@@ -47,27 +36,6 @@ public class CustomerController {
 		System.out.println("************* ******************" + obj.get("result"));
 		return json;
 	}
-	/*
-	 * 
-	 * ResponseMessage speech = new ResponseMessage.Response();
-	 * speech.setSpeech(Arrays.asList("speech 1", "speech 2"));
-	 * 
-	 * ResponseImage image = new ResponseMessage.ResponseImage();
-	 * image.setImageUrl("url image");
-	 * 
-	 * ResponseQuickReply quickReply = new ResponseMessage.ResponseQuickReply();
-	 * quickReply.setTitle("Quick title"); (...) Fulfillment full = new
-	 * Fulfillment(); full.getMessages(new ArrayList<>());
-	 * full.setSpeech("test speech"); full.getMessages().add(card);
-	 * full.getMessages().add(image); full.getMessages().add(quickReply);
-	 * full.getMessages().add(speech);
-	 * 
-	 * 
-	 * 
-	 * 
-	 *
-	 * 
-	 * }
-	 */
+	
 
 }
