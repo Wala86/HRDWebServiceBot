@@ -2,6 +2,7 @@ package com.example.controllers;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.UUID;
 
 import org.json.JSONException;
 
@@ -11,15 +12,19 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+
 @RestController
 public class CustomerController {
 
+	@RequestMapping("/resource")
+	  public Map<String,Object> home() {
+	    Map<String,Object> model = new HashMap<String,Object>();
+	    model.put("id", UUID.randomUUID().toString());
+	    model.put("content", "Hello World");
+	    return model;
+	  }
+
 	/*
-	 * @RequestMapping("/resource") public Map<String, Object> home() { Map<String,
-	 * Object> model = new HashMap<String, Object>(); model.put("id",
-	 * UUID.randomUUID().toString()); model.put("content", "Hello World"); return
-	 * model; }
-	 * 
 	 * // @RequestMapping(value = "/webhook", method = RequestMethod.POST) //
 	 * private Map<String,Object> webhook(@RequestParam("shipping-zone") String //
 	 * shippingZone, @RequestParam("action") String action) throws JSONException {
